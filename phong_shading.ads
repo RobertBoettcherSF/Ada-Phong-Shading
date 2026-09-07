@@ -148,7 +148,7 @@ package Phong_Shading with SPARK_Mode => On is
       W0, W1, W2 : Real) return Unit_Vector_3D with
      Global => null,
      Pre    => (W0 >= -0.0001 and then W1 >= -0.0001 and then W2 >= -0.0001)
-               and then (Real_Math.abs (W0 + W1 + W2 - 1.0) < 0.001);
+               and then (abs (W0 + W1 + W2 - 1.0) < 0.001);
 
    --  ========================================================================
    --  Illumination Model Variants
