@@ -186,7 +186,7 @@ package body Phong_Shading with SPARK_Mode => On is
    begin
       --  Validate barycentric coordinates non-negativity and partition of unity
       if W0 < -0.0001 or else W1 < -0.0001 or else W2 < -0.0001
-        or else Real_Math.abs (W0 + W1 + W2 - 1.0) > 0.001
+        or else abs (W0 + W1 + W2 - 1.0) > 0.001
       then
          raise Invalid_Barycentric_Coord with "Barycentric coords sum to 1";
       end if;
