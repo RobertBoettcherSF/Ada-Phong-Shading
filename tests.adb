@@ -18,7 +18,7 @@ procedure Tests is
 
    function Approx (A, B : Real; Tolerance : Real := 0.001) return Boolean is
    begin
-      return Real_Math.abs (A - B) <= Tolerance;
+      return abs (A - B) <= Tolerance;
    end Approx;
 
    --  Default setup items
@@ -220,6 +220,7 @@ begin
          N1 => (-1.0, 0.0, 0.0),
          N2 => (0.0, 0.0, 0.0));
       Dummy_V : Unit_Vector_3D;
+      pragma Unreferenced (Dummy_V);
    begin
       begin
          Dummy_V := Normalize ((0.0, 0.0, 0.0));
